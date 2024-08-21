@@ -48,8 +48,9 @@ input[type="text"], input[type="number"], select {
 
 .hero {
     color: white;
+    font-size: clamp(1rem, 1vw, 2rem);
 }
 
-.hero .title {
-    font-size: 4rem;
+.hero-title {
+    font-size: clamp(2rem, 2.5vw, 4rem);
 }
