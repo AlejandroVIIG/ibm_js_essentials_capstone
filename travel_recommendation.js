@@ -46,7 +46,7 @@ function searchRecommendation() {
                 cardText.classList.add("card-text", "fs-5");
                 if(input === "country" || input === "countries"){
                     cardText.classList.remove("fs-5");
-                    cardText.style.fontSize = "7.5px";
+                    cardText.style.fontSize = "9px";
                 }
                 cardText.innerText = item.description;
 
@@ -67,3 +67,9 @@ function searchRecommendation() {
 
 btnSearch = document.getElementById("btnSearch");
 btnSearch.addEventListener("click", searchRecommendation);
+
+btnClear = document.getElementById("clearSearch");
+btnClear.addEventListener("click", () => {
+    const cards = document.getElementById("hero-recommendations");
+    cards.innerHTML = "";
+});
