@@ -11,11 +11,13 @@ function searchRecommendation() {
             switch(input) {
                 case "country":
                 case "countries":
-                    for(item of data.countries) result.push(item);
+                    for(item of data.countries)
+                        for(city of item.cities) result.push(city);
                     break;
                 case "temple":
                 case "temples":
                     for(item of data.temples) result.push(item);
+                    break;
                 case "beach":
                 case "beaches":
                     for(item of data.beaches) result.push(item);
@@ -29,9 +31,11 @@ function searchRecommendation() {
                 const cardTitle = document.createElement("h5");
                 const cardText = document.createElement("p");
 
-                card.classList.add("card", "mx-2", "w-50");
+                card.classList.add("card", "mx-2", "w-25");
+                card.style.height = "fit-content"
+                
 
-                img.classList.add("card-img-top");
+                img.classList.add("card-img-top", "img-fluid");
                 img.setAttribute("src", item.imageUrl);
 
                 cardBody.classList.add("card-body");
@@ -40,6 +44,10 @@ function searchRecommendation() {
                 cardTitle.innerText = item.name;
 
                 cardText.classList.add("card-text", "fs-5");
+                if(input === "country" || input === "countries"){
+                    cardText.classList.remove("fs-5");
+                    cardText.style.fontSize = "7.5px";
+                }
                 cardText.innerText = item.description;
 
                 cards.appendChild(card);
