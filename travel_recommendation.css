@@ -59,6 +59,11 @@ input[type="text"], input[type="number"], select {
     max-width: 50%;
 }
 
+#hero-recommendations {
+    display: flex;
+    gap: 10px;
+}
+
 .icon-column {
     width: fit-content;
     border: 1px dotted white;
