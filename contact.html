@@ -19,9 +19,6 @@
                             <li><a href="./index.html" id="home">Home</a></li>
                             <li><a href="./about.html" id="about">About Us </a></li>
                             <li><a href="./contact.html" id="contact">Contact Us </a></li>
-                            <li><input type="text" id="searchInput" placeholder="Search for recommendations">  </li>
-                            <li><button id='btnSearch'>Search</button></li>
-                            <li><button id="clearSearch">Clear</button></li>
                         </ul>
                     </nav>
                 </div>
@@ -44,14 +41,31 @@
                 <div class="col">
                     <div class="row h-100 align-items-center">
                         <div class="col-md-6 hero-text flex-column">
-                            <h1 class="hero-h1 ">Explore</br> Dream</br> Destination</h1>         
-                            <p class="hero-p">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                Pellentesque et tristique enim. Proin posuere nibh ante,
-                                quis egestas mauris vulputate at.
+                            <h1 class="hero-h1 fw-semibold">Contact Us</h1>         
+                            <p class="hero-p fs-4">
+                                We'd love to hear from you!
                             </p>
                         </div>
                     </div>
+                </div>
+                <div class="col align-self-center">
+                    <form>
+                        <div class="input-group mb-3">
+                            <label class="input-group-text" for="name">Name</label>
+                            <input type="text" id="name" name="name" class="form-control" placeholder="Name" aria-label="name" aria-describedby="basic-addon1">
+                          </div>
+                          
+                          <div class="input-group mb-3">
+                            <input type="text" id="email" name="email" class="form-control" placeholder="email" aria-label="email" aria-describedby="basic-addon2">
+                            <label class="input-group-text" for="email" id="basic-addon2">@example.com</label>
+                          </div>
+                          
+                          <div class="input-group mb-3">
+                            <label for="message" class="input-group-text">Message</label>
+                            <textarea class="form-control" id="message" name="message" aria-label="With textarea"></textarea>
+                          </div>
+                          <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
                 </div>
             </div>
         </div>
